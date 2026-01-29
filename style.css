@@ -9,7 +9,7 @@ body {
 
   background-image: url("images/bg.jpg");
   background-repeat: repeat;
-  background-size: auto;
+  background-size: 140px;
 
   display: flex;
   justify-content: center;
@@ -40,19 +40,23 @@ body {
 
 /* TEKS */
 .title {
-  font-size: 26px;
+  font-size: 16px;
+  font-family: cursive;
   color: #8aaecf;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 14px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive ;
   color: #7a9bb8;
   margin-bottom: 16px;
 }
 
 .text {
   border: 2px solid #a6d8ff;
+  font-family: "Comic Sans MS", "Comic Sans", cursive ;
   padding: 12px;
   border-radius: 12px;
   font-size: 15px;
@@ -127,6 +131,8 @@ body {
 }
 
 .story-box p {
+  font-size: 12px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   margin-bottom: 12px;
   line-height: 1.6;
   color: #444;
@@ -138,7 +144,8 @@ body {
 
 /*teks di index html*/
 .intro {
-  font-size: 15px;
+  font-size: 12px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive ;
   line-height: 1.6;
   color: #444;
   margin-bottom: 20px;
