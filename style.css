@@ -135,3 +135,11 @@ body {
 .story-box p:last-child {
   margin-bottom: 0;
 }
+
+/*teks di index html*/
+.intro {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
