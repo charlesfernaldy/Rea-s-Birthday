@@ -188,3 +188,45 @@ body {
   animation: fadeUp 1s ease forwards;
   animation-delay: 0.2s;
 }
+
+.btn-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.keypad button {
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: none;
+  background: #ffd1e8;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.keypad button:active {
+  transform: scale(0.95);
+}
+
+.keypad-action {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn.small {
+  padding: 10px 20px;
+}
+
+.password-input {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 6px;
+}

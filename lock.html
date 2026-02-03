@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk Dulu 🤍</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="card">
+    <h2>Masukkan Password 🤍</h2>
+
+    <input
+      type="password"
+      id="display"
+      class="password-input"
+      disabled
+    >
+
+    <div class="keypad">
+      <button onclick="add(1)">1</button>
+      <button onclick="add(2)">2</button>
+      <button onclick="add(3)">3</button>
+
+      <button onclick="add(4)">4</button>
+      <button onclick="add(5)">5</button>
+      <button onclick="add(6)">6</button>
+
+      <button onclick="add(7)">7</button>
+      <button onclick="add(8)">8</button>
+      <button onclick="add(9)">9</button>
+    </div>
+
+    <div class="keypad-action">
+      <button onclick="clearPass()" class="btn small">Hapus</button>
+      <button onclick="checkPass()" class="btn small">Masuk</button>
+    </div>
+
+    <p id="error" class="error-text"></p>
+  </div>
+
+  <script>
+    let input = "";
+
+    function add(num) {
+      input += num;
+      document.getElementById("display").value = input;
+    }
+
+    function clearPass() {
+      input = "";
+      document.getElementById("display").value = "";
+    }
+
+    function checkPass() {
+      if (input === "1234") {
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").textContent = "Salah 😜";
+        clearPass();
+      }
+    }
+  </script>
+</body>
+</html>
