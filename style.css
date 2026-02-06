@@ -252,76 +252,72 @@ body {
 
 .journey-page {
   min-height: 100vh;
-  background: url("images/bg2.jpg") center / cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Comic Neue', "Comic Sans MS", cursive;
-}
-
-/* Tengah halaman */
-.journey-center {
+  padding: 24px 16px;
   text-align: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 420px;
+
+  background-image: url("images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-/* Judul */
+/* CENTER */
+.journey-center {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* TITLE */
 .journey-title {
-  font-size: 26px;
-  font-weight: 700;
-  color: #d84b8a;
+  font-size: 24px;
   margin-bottom: 6px;
 }
 
-/* Subjudul */
 .journey-subtitle {
   font-size: 14px;
-  color: #777;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
-/* Grid icon */
+/* ICON GRID */
 .journey-icons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  gap: 20px;
 }
 
-/* Icon box (outline only) */
+/* ICON BOX */
 .journey-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px;
-  border: 3px solid #c93774;
+  border: 3px solid #ff7aa2;
   border-radius: 20px;
-  background: rgba(255,255,255,0.9);
-  transition: transform 0.25s ease;
+  padding: 16px;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Gambar icon */
+/* ICON IMAGE */
 .journey-icon img {
-  width: 80px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
 }
 
-/* Hover / tap */
+/* RESPONSIVE DESKTOP */
+.journey-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.journey-center {
+  max-width: 420px;   /* batas aman HP */
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
 .journey-icon:hover {
   transform: scale(1.06);
   box-shadow: 0 6px 14px rgba(217, 76, 138, 0.3);
-}
-
-/* =========================
-   RESPONSIVE HP KECIL
-========================= */
-@media (max-width: 480px) {
-  .journey-title {
-    font-size: 22px;
-  }
-
-  .journey-icon img {
-    width: 70px;
-  }
 }
