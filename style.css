@@ -194,6 +194,7 @@ body {
   margin-top: 20px;
 }
 
+/*password keyboard*/
 .keypad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
