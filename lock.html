@@ -32,6 +32,8 @@
       <button onclick="add(7)">7</button>
       <button onclick="add(8)">8</button>
       <button onclick="add(9)">9</button>
+
+      <button onclick="add(0)" class="zero">0</button>
     </div>
 
     <div class="keypad-action">
@@ -56,7 +58,8 @@
     }
 
     function checkPass() {
-      if (input === "1234") {
+      if (input === "1402") {
+        localStorage.setItem("unlock", "yes");
         window.location.href = "index.html";
       } else {
         document.getElementById("error").textContent = "Salah 😜";

@@ -27,4 +27,9 @@
   </div>
 
 </body>
+<script>
+  if (localStorage.getItem("unlock") !== "yes") {
+    window.location.href = "lock.html";
+  }
+</script>
 </html>
