@@ -13,12 +13,12 @@
   <div class="card">
     <h2>Masukkan Password 🤍</h2>
 
-    <input
-      type="password"
-      id="display"
-      class="password-input"
-      disabled
-    >
+    <div class="pass-box">
+  <input type="text" class="pass-input" disabled>
+  <input type="text" class="pass-input" disabled>
+  <input type="text" class="pass-input" disabled>
+  <input type="text" class="pass-input" disabled>
+    </div>
 
     <div class="keypad">
       <button onclick="add(1)">1</button>
@@ -48,24 +48,41 @@
     let input = "";
 
     function add(num) {
+      if (input.length >= 4) return;
       input += num;
-      document.getElementById("display").value = input;
+      const boxes = document.querySelectorAll(".pass-input");
+  boxes[input.length - 1].value = "♥";
     }
 
     function clearPass() {
       input = "";
-      document.getElementById("display").value = "";
+     document.querySelectorAll(".pass-input").forEach(box => {
+    box.value = "";
+  });
     }
 
     function checkPass() {
-      if (input === "1402") {
-        localStorage.setItem("unlock", "yes");
-        window.location.href = "index.html";
-      } else {
-        document.getElementById("error").textContent = "Salah 😜";
-        clearPass();
-      }
-    }
-  </script>
+     if (input === "1402") {
+       localStorage.setItem("unlock", "yes");
+
+       document.querySelector(".card").classList.add("unlock");
+       document.body.classList.add("fade-out");
+
+       setTimeout(() => {
+         window.location.href = "index.html";
+       }, 600);
+
+     } else {
+       document.getElementById("error").textContent = "Salah 😜";
+       const card = document.querySelector(".card");
+  card.classList.add("shake");
+
+  setTimeout(() => {
+    card.classList.remove("shake");
+  }, 400);
+       clearPass();
+     }
+}
+   </script>
 </body>
 </html>

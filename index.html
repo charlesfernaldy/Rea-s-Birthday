@@ -8,7 +8,8 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-enter">
+  <div class="confetti"></div>
 
   <div class="card">
     <h1 class="title">Hai Kamu 🤍</h1>
@@ -25,6 +26,17 @@
     <a href="story.html" class="btn">Next ➜</a>
     <a href="no.html" class="btn btn-outline">Ngga 😝</a>
   </div>
+  
+<script>
+  const confetti = document.querySelector(".confetti");
+
+  for (let i = 0; i < 25; i++) {
+    const piece = document.createElement("span");
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.animationDelay = Math.random() * 2 + "s";
+    confetti.appendChild(piece);
+  }
+</script>
 
 </body>
 <script>
