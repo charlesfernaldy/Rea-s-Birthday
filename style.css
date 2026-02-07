@@ -267,7 +267,7 @@ body {
 .journey-center {
   max-width: 420px;
   margin: 0 auto;
-  animation: cardIn 0.8s ease forwards;
+  animation: cardIn 0.2s ease forwards;
   animation-delay: 0.2s;
 }
 @keyframes cardIn {
@@ -286,6 +286,22 @@ body {
   font-size: 14px;
   margin-bottom: 24px;
 }
+.journey-textbox {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 14px;
+
+  background: #ffffff;
+  border: 2px solid #452c63;
+  border-radius: 22px;
+  padding: 12px 16px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(138, 174, 207, 0.25);
+
+  backdrop-filter: blur(6px);
+}
 
 /* ICON GRID */
 .journey-icons {
@@ -300,7 +316,7 @@ body {
   border-radius: 20px;
   padding: 16px;
   background: white;
-
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -318,7 +334,7 @@ body {
 
 /* background masuk pelan */
 .journey-page {
-  animation: bgFade 1.2s ease forwards;
+  animation: bgFade 0,5s ease forwards;
 }
 
 @keyframes bgFade {
