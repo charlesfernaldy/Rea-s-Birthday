@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music 🤍</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .music-card {
+      max-width: 360px;
+      margin: 0 auto;
+      padding: 24px;
+      text-align: center;
+      background: #ffffff;
+      border: 3px solid #a6d8ff;
+      border-radius: 22px;
+      box-shadow: 0 10px 25px rgba(138, 174, 207, 0.25);
+    }
+
+    .music-title {
+      font-family: 'Comic Neue', cursive;
+      font-size: 14px;
+      color: #8aaecf;
+      margin-bottom: 12px;
+    }
+
+    .music-img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 16px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border: 3px dotted #a6d8ff;
+    }
+
+    .music-name {
+      font-family: 'Comic Neue', cursive;
+      font-size: 12px;
+      font-weight: 600;
+      color: #444;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="music-card">
+    <p class="music-title">this song reminds me about u</p>
+
+    <img src="images/music-cover.jpg" alt="Lagu" class="music-img" id="musicThumb">
+
+    <p class="music-name">Lagu...</p>
+
+    <audio id="musicPlayer" src="music/musik.mp3"></audio>
+    <a href="journey.html" class="btn" id="backBtn">⬅ Back</a>
+  </div>
+
+  <script>
+    const thumb = document.getElementById("musicThumb");
+    const player = document.getElementById("musicPlayer");
+
+    thumb.addEventListener("click", () => {
+      if (player.paused) {
+        player.play();
+        thumb.classList.add("playing");
+        localStorage.setItem("musicPlaying", "yes");
+      } else {
+        player.pause();
+        thumb.classList.remove("playing");
+        localStorage.setItem("musicPlaying", "no");
+      }
+    });
+    window.addEventListener("beforeunload", () => {
+  localStorage.setItem("musicTime", player.currentTime);
+});
+  </script>
+</body>
+</html>
