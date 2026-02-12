@@ -1,0 +1,788 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+
+  background-image: url("images/bg.jpg");
+  background-repeat: repeat;
+  background-size: 190px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 360px;
+  border: 3px solid #a6d8ff;
+
+  padding: 28px 24px;
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(138, 174, 207, 0.25);
+}
+
+/* Untuk teks panjang */
+.long {
+  text-align: left;
+}
+
+/* TEKS */
+.title {
+  font-size: 16px;
+  font-family: cursive;
+  color: #8aaecf;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-family: 'Comic Neue', "Comic Sans MS", cursive;
+  font-weight: 600;
+  color: #7a9bb8;
+  margin-bottom: 16px;
+}
+
+.text {
+  border: 2px solid #a6d8ff;
+  font-family: 'Comic Neue', "Comic Sans MS", cursive;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+
+  padding: 12px 26px;
+  background: #8aaecf;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+
+  font-size: 15px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
+
+.choice {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* tombol versi outline */
+.btn-outline {
+  background: transparent;
+  color: #8aaecf;
+  border: 2px solid #a6d8ff;
+}
+
+/*foto di yes html*/
+.card-img {
+  width: 100%;
+  border: 3px dotted #a6d8ff;
+  max-width: 220px;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+/*border di sekeliling teks dan judul*/
+.story-box {
+  border: 2px dashed #a6d8ff;
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: 14px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.story-box p {
+  font-size: 12px;
+  font-family: 'Comic Neue', "Comic Sans MS", cursive;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #444;
+}
+.story-box p:last-child {
+  margin-bottom: 0;
+}
+
+/*teks di index html*/
+.intro {
+  font-size: 12px;
+  font-family: 'Comic Neue', "Comic Sans MS", cursive;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/*animasi fade*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*teks per paragraf muncul perlahan*/
+.story-box p {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.story-box p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.story-box p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.story-box p:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/*animasi foto muncul*/
+.animate-img {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.btn-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*password keyboard*/
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+  justify-items: center;
+}
+
+.keypad button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #ffd1e8;
+  font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
+} 
+
+.keypad button:active {
+  transform: scale(0.95);
+}
+
+.keypad-action {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn.small {
+  padding: 10px 20px;
+}
+
+.password-input {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 6px;
+}
+
+.keypad .zero {
+  grid-column: 2 / 3;
+}
+
+.keypad button:hover {
+  background: #eaf4ff;
+}
+
+/*opsi di end*/
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.journey-page {
+  min-height: 100vh;
+  padding: 24px 16px;
+  text-align: center;
+  animation: pageFade 1s ease forwards;
+  background-image: url("images/bg.jpg");
+  background-repeat: repeat;
+  background-size: 190px;
+}
+@keyframes pageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* CENTER */
+.journey-center {
+  max-width: 420px;
+  margin: 0 auto;
+  animation: cardIn 0.2s ease forwards;
+  animation-delay: 0.2s;
+}
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* TITLE */
+.journey-title {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.journey-subtitle {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.journey-textbox {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 14px;
+
+  background: #ffffff;
+  border: 2px solid #452c63;
+  border-radius: 22px;
+  padding: 12px 16px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(138, 174, 207, 0.25);
+
+  backdrop-filter: blur(6px);
+}
+
+/* ICON GRID */
+.journey-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ICON BOX */
+.journey-icon {
+  border: 3px solid #ff7aa2;
+  border-radius: 20px;
+  padding: 16px;
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON IMAGE */
+.journey-icon img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+}
+
+/* JOURNEY TRANSITION */
+/* ============================= */
+
+/* background masuk pelan */
+.journey-page {
+  animation: bgFade 0,5s ease forwards;
+}
+
+@keyframes bgFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ICON MUNCUL SATU-SATU */
+.journey-icon {
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  animation: iconPop 0.5s ease forwards;
+}
+
+/* delay bertahap */
+.journey-icon:nth-child(1) { animation-delay: 1s; }
+.journey-icon:nth-child(2) { animation-delay: 1.4s; }
+.journey-icon:nth-child(3) { animation-delay: 1.8s; }
+.journey-icon:nth-child(4) { animation-delay: 2.2s; }
+
+@keyframes iconPop {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* card muncul dulu */
+.journey-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  animation: cardEnter 0.8s ease forwards;
+}
+
+@keyframes cardEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* teks & icon muncul setelah card */
+.journey-card h2,
+.journey-card p,
+.journey-icons {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.journey-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.journey-center {
+  max-width: 420px;   /* batas aman HP */
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.journey-icon:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 14px rgba(217, 76, 138, 0.3);
+}
+
+/* efek transisi unlock */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.card.unlock {
+  animation: unlockAnim 0.6s ease forwards;
+}
+
+@keyframes unlockAnim {
+  to {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+
+/* 4 kotak password */
+.pass-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pass-input {
+  width: 46px;
+  height: 54px;
+  border-radius: 14px;
+  border: 1.8px solid rgba(166, 216, 255, 0.8);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(6px);
+
+  text-align: center;
+  font-size: 22px;
+  color: #ff7aa2;
+
+  box-shadow:
+    inset 0 0 0 rgba(255, 122, 162, 0),
+    0 6px 14px rgba(138, 174, 207, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+/* saat terisi */
+.pass-input[value="♥"] {
+  border-color: #ff7aa2;
+  box-shadow:
+    0 0 0 3px rgba(255, 122, 162, 0.25),
+    0 8px 18px rgba(255, 122, 162, 0.35);
+}
+
+/* ===== LOVE DENYUT + GLOW ===== */
+
+.pass-input:not([value=""]) {
+  border-color: #ff7aa2;
+  color: #ff7aa2;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 122, 162, 0.25),
+    0 0 14px rgba(255, 122, 162, 0.45),
+    0 0 28px rgba(255, 122, 162, 0.25);
+
+  animation: heartbeat 3s infinite ease-in-out;
+}
+
+/* animasi denyut */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* shake saat salah */
+.card.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.pass-input[value="🔐"] {
+  animation: unlockPop 0.4s ease;
+}
+
+@keyframes unlockPop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* ===== ANIMASI MASUK PAGE ===== */
+
+.page-enter {
+  animation: pageFadeIn 1s ease forwards;
+}
+
+.page-enter .card {
+  animation: cardReveal 1s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== CONFETTI TIPIS ===== */
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.confetti span {
+  position: absolute;
+  top: -10px;
+  width: 6px;
+  height: 10px;
+  background: rgba(255, 122, 162, 0.7);
+  border-radius: 2px;
+
+  animation: confettiFall 3.5s ease forwards;
+}
+
+.confetti span:nth-child(even) {
+  background: rgba(138, 174, 207, 0.7);
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .confetti span {
+    width: 4px;
+    height: 8px;
+  }
+}
+
+/* ===== CARD ENTER (STORY) ===== */
+
+.card-enter {
+  opacity: 0;
+  animation: cardEnter 0.7s ease forwards;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* isi story mulai SETELAH card selesai */
+.card-enter .animate-img,
+.card-enter .story-box {
+  animation-delay: 0.9s;
+}
+
+/* ===== END CARD ENTER ===== */
+
+.card-end {
+  opacity: 0;
+  animation: endCardEnter 0.9s ease forwards;
+}
+
+@keyframes endCardEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.card-end .animate-img,
+.card-end .story-box {
+  animation-delay: 0.9s;
+}
+
+/* ===== MUSIC CARD ===== */
+.music-card {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+  background: #ffffff;
+  border: 3px solid #a6d8ff;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(138, 174, 207, 0.25);
+  animation: cardEnter 0.7s ease forwards;
+}
+
+.music-title {
+  font-family: 'Comic Neue', cursive;
+  font-size: 14px;
+  color: #8aaecf;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.music-img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 3px dotted #a6d8ff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.music-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(217, 76, 138, 0.3);
+}
+
+.music-name {
+  font-family: 'Comic Neue', cursive;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 6px;
+}
+
+/* ===== ANIMASI CARD MASUK ===== */
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* efek thumbnail saat musik diputar */
+.music-img.playing {
+  box-shadow: 0 0 0 6px rgba(255, 122, 162, 0.35), 0 8px 18px rgba(255, 122, 162, 0.45);
+  animation: heartbeat 2s infinite ease-in-out;
+}
+
+/* denyut hati (sama seperti pass-input) */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.15); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* ===== SCRAPBOOK PHOTO GRID ===== */
+.scrapbook {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 30px;
+}
+/* bingkai SERAGAM */
+.photo-item {
+  aspect-ratio: 3 / 4;
+  position: relative;
+  background: #fff;
+  border-radius: 22px;
+  border: 3px solid #9fd3ff;
+  box-shadow: 0 12px 24px rgba(140,170,200,.28);
+  overflow: hidden;
+  transition: .35s ease;
+}
+
+/* foto */
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* efek hover */
+.photo-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 18px 34px rgba(217,76,138,.3);
+  z-index: 3;
+}
+
+/* ===== TAPE EFFECT ===== */
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 60px;
+  height: 24px;
+  background: rgba(255, 214, 225, 0.85);
+  border: 1px solid rgba(255, 160, 190, 0.6);
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+@media (min-width: 768px) {
+  .scrapbook {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* posisi tidak sejajar (ala scrapbook / tiktok) */
+.photo-item:nth-child(1) {
+  transform: translateY(10px) rotate(-1deg);
+}
+
+.photo-item:nth-child(2) {
+  transform: translateY(-14px) rotate(1.2deg);
+}
+
+.photo-item:nth-child(3) {
+  transform: translateX(10px) translateY(6px) rotate(-0.8deg);
+}
+
+.photo-item:nth-child(4) {
+  transform: translateX(-8px) translateY(-12px) rotate(1deg);
+}
+
+.photo-item:nth-child(5) {
+  transform: translateY(14px) rotate(-1.3deg);
+}
+
