@@ -712,3 +712,77 @@ body.fade-out {
   60% { transform: scale(1.12); }
   100% { transform: scale(1); }
 }
+
+/* ===== SCRAPBOOK PHOTO GRID ===== */
+.scrapbook {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 30px;
+}
+/* bingkai SERAGAM */
+.photo-item {
+  aspect-ratio: 3 / 4;
+  position: relative;
+  background: #fff;
+  border-radius: 22px;
+  border: 3px solid #9fd3ff;
+  box-shadow: 0 12px 24px rgba(140,170,200,.28);
+  overflow: hidden;
+  transition: .35s ease;
+}
+
+/* foto */
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* efek hover */
+.photo-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 18px 34px rgba(217,76,138,.3);
+  z-index: 3;
+}
+
+/* ===== TAPE EFFECT ===== */
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 60px;
+  height: 24px;
+  background: rgba(255, 214, 225, 0.85);
+  border: 1px solid rgba(255, 160, 190, 0.6);
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+@media (min-width: 768px) {
+  .scrapbook {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* posisi tidak sejajar (ala scrapbook / tiktok) */
+.photo-item:nth-child(1) {
+  transform: translateY(10px) rotate(-1deg);
+}
+
+.photo-item:nth-child(2) {
+  transform: translateY(-14px) rotate(1.2deg);
+}
+
+.photo-item:nth-child(3) {
+  transform: translateX(10px) translateY(6px) rotate(-0.8deg);
+}
+
+.photo-item:nth-child(4) {
+  transform: translateX(-8px) translateY(-12px) rotate(1deg);
+}
+
+.photo-item:nth-child(5) {
+  transform: translateY(14px) rotate(-1.3deg);
+}
+
