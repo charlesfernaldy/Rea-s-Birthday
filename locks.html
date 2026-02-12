@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locks 🔐</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="journey-page">
+
+  <div class="journey-center journey-card">
+    <div class="journey-textbox">
+      <h2 class="journey-title">kuis rahasia</h2>
+      <p class="journey-subtitle">jawab yang benar yak</p>
+    </div>
+
+    <div class="quiz-container">
+
+      <!-- PERTANYAAN 1 -->
+      <div class="quiz-item">
+        <p>1. kita pernah pacaran pas tanggal berapa yah?🤔 (tanggal jadian)</p>
+        <input type="text" id="q1">
+        <button onclick="checkAnswer(1)">check 🤨</button>
+        <p class="result" id="r1"></p>
+      </div>
+
+      <!-- PERTANYAAN 2 -->
+      <div class="quiz-item">
+        <p>2. apa password hpku?</p>
+        <input type="text" id="q2">
+        <button onclick="checkAnswer(2)">check 🤨</button>
+        <p class="result" id="r2"></p>
+      </div>
+
+      <!-- PERTANYAAN 3 -->
+      <div class="quiz-item">
+        <p>3. siapa orang yang paling manis?</p>
+        <input type="text" id="q3">
+        <button onclick="checkAnswer(3)">check 🤨</button>
+        <p class="result" id="r3"></p>
+      </div>
+
+      <!-- PERTANYAAN 4 -->
+      <div class="quiz-item">
+        <p>4. kamu cantik atau ngga?</p>
+        <input type="text" id="q4">
+        <button onclick="checkAnswer(4)">check 🤨</button>
+        <p class="result" id="r4"></p>
+      </div>
+
+      <!-- PERTANYAAN 5 -->
+      <div class="quiz-item">
+        <p>5. makanan favorit ku?</p>
+        <input type="text" id="q5">
+        <button onclick="checkAnswer(5)">check 🤨</button>
+        <p class="result" id="r5"></p>
+      </div>
+
+    </div>
+
+    <a href="journey.html" class="btn">⬅ Back</a>
+  </div>
+
+<script>
+const answers = {
+  1: {
+    correct: ["28", "28 oktober", "28 oktober 2024", "28/08/2024", "28-8-2024"],
+    successMsg: "waww masih inget, keren seng",
+    failMsg: "parahhh udah lupa, tanggal 28 oktober ya dek😒"
+  },
+  2: {
+    correct: ["1402", "14 02", "1 4 0 2"],
+    successMsg: "tanggal lahir orang paling manis tuh ya pasti😏",
+    failMsg: "tanggal lahir sendiri masa lupa sih"
+  },
+  3: {
+    correct: ["aku"],
+    successMsg: "betulll, yang paling manis itu kamu, hihi",
+    failMsg: "orang paling manis tuh kamu menurutku😆"
+  },
+  4: {
+    correct: ["cantik", "cantiklah", "cantik banget", "perfect", "cantik kata kamu", "cantik kata orang", "banget"],
+    successMsg: "yapppp, batull tull tullll, cantikkkk bangettt",
+    failMsg: "owww noooo, kamu tuh cantik, tetott salah jawabannya🤭"
+  },
+  5: {
+    correct: ["mie", "indomie", "mi", "indomi",],
+    successMsg: "jirr kok tau, enak soalnya seng",
+    failMsg: "salahh dek, jawabannya indomie🤤"
+  }
+};
+
+function checkAnswer(number) {
+  const input = document.getElementById("q" + number).value.toLowerCase().trim();
+  const result = document.getElementById("r" + number);
+  const correctData = answers[number];
+
+  const isCorrect = correctData.correct.some(answer =>
+    input.includes(answer.toLowerCase())
+  );
+
+  if (isCorrect) {
+    result.innerHTML = correctData.successMsg;
+    result.style.color = "green";
+  } else {
+    result.innerHTML = correctData.failMsg;
+    result.style.color = "red";
+  }
+}
+
+</script>
+</body>
+</html>

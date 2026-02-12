@@ -24,10 +24,9 @@ body {
   width: 100%;
   max-width: 360px;
   border: 3px solid #a6d8ff;
-
+  font-size: 11px;
   padding: 28px 24px;
   border-radius: 22px;
-
   text-align: center;
 
   box-shadow: 0 10px 25px rgba(138, 174, 207, 0.25);
@@ -785,4 +784,88 @@ body.fade-out {
 .photo-item:nth-child(5) {
   transform: translateY(14px) rotate(-1.3deg);
 }
+.photo-item:nth-child(6) {
+  transform: translateX(12px) translateY(-8px) rotate(1.1deg);
+}
 
+/*locks.html*/
+.quiz-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quiz-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.quiz-item input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+}
+
+.quiz-item button {
+  margin-left: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ffb6d9;
+  cursor: pointer;
+}
+
+.quiz-item button:hover {
+  background: #ff94c7;
+}
+
+.result {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* ===== LETTER PAGE ===== */
+
+.letter-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.letter-card {
+  max-width: 800px;
+  width: 100%;
+  background: white; /* background isi surat */
+  border: 6px solid #6a4c93; /* border besar */
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.letter-title {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.letter-content p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.letter-divider {
+  border-top: 2px dashed #999;
+  margin: 35px 0;
+}
+
+.letter-sign {
+  text-align: right;
+  margin-top: 30px;
+  font-style: italic;
+}
